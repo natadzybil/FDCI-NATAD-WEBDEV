@@ -1,0 +1,98 @@
+body {
+		table-layout: fixed;
+		padding: 2%;
+}
+
+#top { /*-- Green Banner -- */
+	padding: 10px;
+	background-color: #4CAF50;
+}
+
+h1.welcome { /*-- Welcome Text Banner -- */
+	background-color: #4CAF50;
+	font-family: verdana;
+	color: white;
+	text-align: left;
+	padding-left: 40px;
+	font-size: 180%;	
+}
+
+div.wrapper { 
+	position: relative;
+	width: 100%;
+}
+
+div.h1 {
+	padding-top: 0px;
+}
+
+#menubar { /*-- Menu Borders -- */
+	position: absolute;
+	width: 20%;
+}
+
+#menulist { /*-- Menu List-- */
+	padding: inherit;
+	padding-right: inherit
+}
+
+.menuitem {
+	background-color: lightgrey;
+	border-radius: 5px;
+	border: 1px solid grey;
+  	display: block;
+  	padding: 3px;
+  	margin: 3px;
+  	font-family: verdana;
+  	font-size: 15px;
+  	position: relative;
+}
+.menuitem.selected {
+	background-color: #4CAF50;
+}
+
+#main { /*-- This is my html pge -- */
+	margin-left: 22%;
+	font-family: verdana;
+	padding: 0%;
+	position: relative;
+}
+
+p { /*-- Paragraph -- */
+	margin-bottom: 0px;
+}
+
+a { /*-- Color Buttons -- */
+	border-size: 3px;
+	text-align: center;
+	padding: 5px;
+	color: white;
+	text-decoration: none;
+	font-family: verdana;
+	display: inline-block;	
+}
+
+#greenbutton { /*-- Green Button -- */
+	background-color: green;
+}
+
+#orangebutton { /*-- Orange Button -- */
+	background-color: orange;
+}
+
+#bluebutton { /*-- Blue Button -- */
+	background-color: blue;
+}
+
+#redbutton { /*-- Red Button -- */
+	background-color: red;
+}
+
+#bottom { /*-- Footer -- */
+	background-color: #F5F5F5;
+	border: 1px solid lightgrey;
+	text-align: center;
+	font-family: verdana;
+	padding: 2%;
+}
+/*-- END -- */
