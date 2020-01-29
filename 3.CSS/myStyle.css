@@ -5,7 +5,7 @@ body {
 
 #top { /*-- Green Banner -- */
 	padding: 10px;
-	background-color: #4CAF50;
+	background-color: #4CAF50; /*-- By color picker -- */
 }
 
 h1.welcome { /*-- Welcome Text Banner -- */
@@ -39,7 +39,7 @@ div.h1 {
 .menuitem {
 	background-color: lightgrey;
 	border-radius: 5px;
-	border: 1px solid grey;
+	border: 1px solid grey; /*-- Supposedly black but preferred grey -- */
   	display: block;
   	padding: 3px;
   	margin: 3px;
@@ -89,7 +89,7 @@ a { /*-- Color Buttons -- */
 }
 
 #bottom { /*-- Footer -- */
-	background-color: #F5F5F5;
+	background-color: #F5F5F5; /*-- Supposedly light grey but preferred this color -- */
 	border: 1px solid lightgrey;
 	text-align: center;
 	font-family: verdana;
