@@ -58,6 +58,16 @@ html {
     padding: 1%;
 }
 
+.contact_board { 
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    background-image: url("img/contact.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .profile {
   display: inline-block;
   margin: 0 auto;
@@ -113,17 +123,24 @@ input[type=submit]{
 
 .contactContainer {
     border-radius: 5px;
-    padding: 10px;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding: 20%;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 1%;
     margin-bottom: 1%;
-    table-layout: fixed;
     background-image: url("img/contact.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.thisfooter {
+  float: right;
+  width: 50%;
+  padding: auto;
+  height: 300px;
+}
+
 
 .cont_grid {
     padding: auto;
@@ -326,6 +343,7 @@ input[type=submit]{
     transform: translateY(-1.0em);
    
 }
+
 
 
 
