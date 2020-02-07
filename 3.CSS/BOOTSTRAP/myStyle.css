@@ -7,6 +7,10 @@ html {
     padding: 5%;
 }
 
+.container-fluid {
+    padding-top: 10px;
+}
+
 .carousel_container {
     margin: 0 auto;
     width: 100%;
@@ -151,6 +155,10 @@ input[type=submit]{
     border-style: solid;
 }
 
+#zynagraphy {
+  font-size: 280%;
+}
+
 .action-button
 {
     position: relative;
@@ -174,7 +182,8 @@ input[type=submit]{
     font-family: 'Pacifico', cursive;
     font-size: 30px;
     color: #FFF;
-    text-decoration: none;  
+    text-decoration: none; 
+
 }
 
 .blue
@@ -183,6 +192,7 @@ input[type=submit]{
     border-bottom: 5px solid #2980B9;
     text-shadow: 0px -2px #2980B9;
     text-align: center;
+     width: 100%;
 }
 
 .pink
@@ -190,7 +200,7 @@ input[type=submit]{
     background-color: #fb00ff;
     border-bottom: 5px solid #BD3E31;
     text-shadow: 0px -2px #BD3E31;
-    width: 30%;
+    width: 100%;
 }
 
 .action-button:active
@@ -263,15 +273,14 @@ input[type=submit]{
 .btn:visited{
   text-decoration: none;
   text-transform:uppercase;
-  position:relative;
-  top:0;
-  left:0;
-  padding:20px 40px;
+  position:inherit;
+  padding:2% 5%;
   border-radius:100px;
   display:inline-block;
   transition: all .5s;
-  margin-top: 5px;
-  margin-right: 100px;
+  margin: .5% .5%;
+  text-align: left;
+  float: right;
 }
 
 .btn-white{
@@ -342,6 +351,22 @@ input[type=submit]{
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     transform: translateY(-1.0em);
    
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-image: none;
+    border: 1px solid white;
+    border-radius: 4px;
 }
 
 
