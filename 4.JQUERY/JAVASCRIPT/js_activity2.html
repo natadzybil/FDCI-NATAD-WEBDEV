@@ -66,17 +66,7 @@
 				
 				if (longest < inputString[i].length) {
 						longest = inputString[i].length;
-
-						if (inputString[i].length == longest.length) {
-							lngwrd = text;
-						}
-						else {
-							lngwrd = inputString[i];
-						}
-							console.log(text);
-							console.log(inputString[i]);
-						
-						
+						lngwrd = inputString[i];
 				}
 
 
@@ -106,3 +96,15 @@
 			}
 		}
 
+		function calculateHr() {
+
+			var inputHr = parseInt(document.getElementById("inputHour").value);
+			var minutes = 0;
+
+				minutes = parseInt(inputHr) * 60;
+				document.getElementById("hrResult").innerHTML = "Minutes : " +  minutes;
+				console.log(minutes);
+		}
+	</script>
+</body>
+</html>
