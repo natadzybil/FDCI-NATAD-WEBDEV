@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Activity 2</title>
+</head>
+<body>
+	<div>
+		<h3>Write a function that would accept a string parameter and output the longest word withing the string.</h3>
+
+		<div>
+			<label>Input String: </label>
+			<input type="text" name="" id="inputString">	
+		</div>
+
+		<button onclick="getLongestWord()" style="margin: 5px 0 5px;" >GET LONGEST WORD</button>
+
+		<div>	
+			<p id="resultstr">String is :  </p>
+		</div>
+
+		<div>
+			<p id="resultwrd">The longest word : </p>
+		</div>
+	</div>
+
+	<div>
+		<h3>Write a function that accepts a number parameter and output if the number is prime or not.</h3>
+
+		<div>
+			<label>Enter Number : </label>
+			<input type="number" name="" id="inputNumber">	
+		</div>
+
+		<button onclick="checkPrime()" style="margin: 5px 0 5px;" >CHECK IF PRIME NUMBER</button>
+
+		<div>	
+			<p id="primeresult">Result : </p>
+		</div>	
+	</div>
+
+	<form method="post" onsubmit="calculateHr(); return false">
+		<div>
+			<h3>Create a form that has 1 input for hour. On submit, display equivalent minutes from the inputted hour.</h3>
+		<div>
+		<div>
+			<label>Input hour to convert :</label>
+		</div>
+		<label>Hour :</label>
+		<input type="number" name="" id="inputHour">
+		<input type="submit" value="CALCULATE">
+		<p id="hrResult">Minutes : </p>
+		
+	</form>
+
+	<script type="text/javascript">
+		function getLongestWord() {
+
+			var text = document.getElementById("inputString").value;
+			var inputString = text.split(" ");
+			var longest = 0;
+			var lngwrd = null;
+
+			document.getElementById("resultstr").innerHTML = "String is :  " + text;
+
+			for (i = 0; i < inputString.length; i++) {
+				
+				if (longest < inputString[i].length) {
+						longest = inputString[i].length;
+
+						if (inputString[i].length == longest.length) {
+							lngwrd = text;
+						}
+						else {
+							lngwrd = inputString[i];
+						}
+							console.log(text);
+							console.log(inputString[i]);
+						
+						
+				}
+
+
+			}
+
+			document.getElementById("resultwrd").innerHTML = "The longest word :  " + lngwrd;
+		}
+
+		function checkPrime() {
+
+			var inputNum = parseInt(document.getElementById("inputNumber").value);
+			var primeCheck = true;
+
+			for (i = 2; i < inputNum; i++) {
+				if (inputNum % i==0) { // not divisible from 2 to the number before itself 
+					primeCheck = false;
+					break;
+				} 
+			}
+
+			if (primeCheck) {
+				document.getElementById("primeresult").innerHTML = "Result : " +  inputNum + " IS A PRIME NUMBER: ";
+				console.log("THIS IS PRIME");
+			} else {
+				document.getElementById("primeresult").innerHTML = "Result : " +  inputNum + " IS NOT A PRIME NUMBER: ";
+				console.log("THIS IS NOT PRIME");
+			}
+		}
+

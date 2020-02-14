@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Activity</title>
+</head>
+<body>
+	
+	<div style="padding-bottom: 10px;">
+		<label>First Number : </label>
+		<input type="number" id="firstNumber" value="">
+	</div>
+
+	<div>
+		<label>Second Number : </label>
+		<input type="number" id="secondNumber" value="">
+	</div>
+
+	<div style="padding-top: 10px;">
+		<button onclick="myFunction('product')" style="border-radius: 1px;">Multiply</button>
+		<button onclick="myFunction('quotient')" style="border-radius: 1px;">Divide</button>
+		<button onclick="myFunction('sum')" style="border-radius: 1px;">Add</button>
+		<button onclick="myFunction('difference')" style="border-radius: 1px;">Subtract</button>
+	</div>
+	
+	<div style="padding-top: 10px;">
+		<p id="result">Result will be displayed here.</p>
+	</div>
+	
+
+	<script type="text/javascript">
+		function myFunction(value){
+
+			var firstNumber = parseInt(document.getElementById("firstNumber").value);
+			var SecondNumber = parseInt(document.getElementById("secondNumber").value);
+
+			var thisResult = "";
+
+			switch (value) {
+				case "sum":
+
+					thisResult = firstNumber + SecondNumber;
+					document.getElementById("result").innerHTML = firstNumber + " + " + SecondNumber + " = " + thisResult;
+
+			    break;
+
+			  	case "difference":
+
+			  		thisResult = firstNumber - SecondNumber;
+					document.getElementById("result").innerHTML = firstNumber + " - " + SecondNumber + " = " + thisResult;
+
+			    break;
+
+			    case "product":
+
+				    thisResult = firstNumber * SecondNumber;
+					document.getElementById("result").innerHTML = firstNumber + " * " + SecondNumber + " = " + thisResult;
+
+			    break;
+
+			    case "quotient":
+
+			    	thisResult = firstNumber / SecondNumber;
+					document.getElementById("result").innerHTML = firstNumber + " / " + SecondNumber + " = " + thisResult;
+
+			    break;
+
+			  default:
+			  		text = "Invalid Input!";
+			  
+		   }
+		}	
+	</script>
+</body>
+</html>
