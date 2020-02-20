@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Activity 3</title>
+</head>
+<body>
+	<div style="border-style: solid; padding: 10px; border-radius: 10px; margin-bottom: 10px;">
+		<h3>Create a form that accepts a name and age input. On every form submit, add the inputted values to an object. Display the object value and display the readable formatted value.</h3>
+
+		<div>
+			<label>Name: </label>
+			<input type="text" name="" id="inputName">
+			<label>Age: </label>
+			<input type="number" name="" id="inputAge">
+			<button onclick="getDisplay()" style="margin: 5px 0 5px;" >ADD</button>
+		</div>
+
+		<div style="padding-bottom: 10px;">
+			<h3>Final Object:</h3> 
+			<p id="finalObj"></p>
+		</div>
+
+		<div>
+			<h3>Readable Format:</h3>
+			<p id="finalFormat"></p>	
+		</div>
+	</div>
+
+	<div style="border-style: solid; padding: 10px; border-radius: 10px;">
+		<h3>PRODUCT INVENTORY</h3>
+
+		<div style="padding:5px;">
+			<label>Name: </label>
+			<input type="text" name="" id="InventName">
+		</div>
+
+		<div style="padding:5px;">
+			<label>Stocks: </label>
+			<input type="number" name="" id="inputStocks">
+		</div>
+
+		<div style="padding:5px;">
+			<label>Price: </label>
+			<input type="number" name="" id="inputPrice">	
+		</div>	
+
+		<div>
+			<button onclick="addtoInventory()" style="margin: 5px 0 5px;" >ADD</button>
+			<h3>Product List:</h3>
+			<p id="productList"></p>
+		</div>	
+
+		
+		<button onclick="calculateTotal()" style="margin: 5px 0 5px;" >Calculate Total Value of each product.</button>
+		<h3>Product Total Value:</h3>
+		<p id="totalProduct"></p>
+		<p id="totalValue"></p>
+		
+	</div>
+
+	<script type="text/javascript">
+		var ArrProdList = [];
+		var ArrProdTotal = [];
+		var myArr = [];
+		var firstValue ="";
+
+		function getDisplay() {
+
+			
+			var dispName = document.getElementById("inputName");
+			var dispAge = document.getElementById("inputAge");
+
+			if (dispAge.value <= -1 ) {
+				alert("Do not use negative numbers.");
+				return;
+			} else if(dispAge.value == NaN){
+				alert("Input age.");	
+				return;
+			} else {
+				if (dispName.value == "" || dispAge.value == "" || dispAge.value <= -1) {
+						alert("Complete all inputs.");
+						return;	
+					} else {
+						var finaldisp = {
+						name : dispName.value,
+						age : dispAge.value
+					};
+			}
+			
+			myArr.push(finaldisp);
+
+			var myJSON = JSON.stringify(myArr);
+			document.getElementById("finalObj").innerHTML = myJSON;
+
+			var parsNum = parseInt(document.getElementById("inputAge").value);
+			document.getElementById("finalFormat").innerHTML += Object.keys(finaldisp)[0] + " : " + finaldisp.name + " , " + Object.keys(finaldisp)[1] + " : " + parsNum + "<br>";
+			console.log(finaldisp);
+
+			dispName.value = "";
+			dispAge.value = "";
+			}
+		}
+
+
+		function addtoInventory() {
+
+			var prodName = document.getElementById("InventName");
+			var dispStocks = document.getElementById("inputStocks");
+			var dispPrice = document.getElementById("inputPrice");
+
+			var arrObj = {
+				Name : prodName.value,
+				Stocks : dispStocks.value,
+				Price : dispPrice.value
+			}
+
+			if (prodName.value == "" || dispStocks.value == "" || dispPrice.value == "" || dispStocks.value <= -1 || dispPrice.value <= -1) {
+				if (dispStocks.value <= -1 || dispPrice.value <= -1) {
+					alert("Do not use negative numbers.");
+					return false;
+				} else {
+					alert("Complete all inputs.");
+					return false;
+				}		
+			} else if (dispPrice.value == NaN || dispStocks.value == NaN ) {
+					alert("Complete all inputs.");
+					return false;
+			} else {
+				document.getElementById("productList").innerHTML += Object.keys(arrObj)[0] + " : " + prodName.value + " , " + Object.keys(arrObj)[1] + " : " + dispStocks.value + " , " + Object.keys(arrObj)[2] + " : " + dispPrice.value + "<br>";
+
+				prodName.value = "";
+				dispStocks.value = "";
+				dispPrice.value = "";
+			}
+			
+			ArrProdList.push(arrObj);
+		 	var myJSON = JSON.stringify(ArrProdList);
+
+		 	console.log(myArr);
+
+		}
+
+		function calculateTotal() {
+
+			var displayProdTotal = document.getElementById("totalProduct");
+			var displayProdTotalValue = document.getElementById("totalValue");
+
+			displayProdTotal.innerHTML = "";
+			displayProdTotalValue.innerHTML = "";
+			var tempArrProdTotal = [];
+			tempArrProdTotal = getProductTotal(ArrProdList);
+			var sumOfPrices = 0;
+			console.log(ArrProdList);
+			
+			for (var i in ArrProdList) {
+				tempArrProdTotal = getProductTotal(ArrProdList[i]);
+				displayProdTotal.innerHTML += tempArrProdTotal.prodName + " will have a Total Value of " + tempArrProdTotal.prodTotal+"<br>";
+				sumOfPrices += tempArrProdTotal.prodTotal;
+			}
+			displayProdTotalValue.innerHTML = "Total Value: " + sumOfPrices; 
+		}
+
+		function getProductTotal(products) {
+			var tempArr = {
+				prodName : products.Name,
+				prodTotal : products.Stocks * products.Price
+			};
+			return tempArr;
+		}
+
+	</script>
+	
+
+</body>
+</html>
