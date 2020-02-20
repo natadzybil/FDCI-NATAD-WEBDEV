@@ -3,59 +3,61 @@
 <head>
 	<title>Activity 3</title>
 </head>
-<body>
-	<div style="border-style: solid; padding: 10px; border-radius: 10px; margin-bottom: 10px;">
-		<h3>Create a form that accepts a name and age input. On every form submit, add the inputted values to an object. Display the object value and display the readable formatted value.</h3>
+<body style="background-image: url('buttonpastel.jpg'); background-repeat: no-repeat; background-size: cover;">
+	<div style="margin: 5% 10% 5% 10%;">
+		<div style="border-style: solid; padding: 10px; border-radius: 10px; margin-bottom: 10px;">
+			<h3>Create a form that accepts a name and age input. On every form submit, add the inputted values to an object. Display the object value and display the readable formatted value.</h3>
 
-		<div>
-			<label>Name: </label>
-			<input type="text" name="" id="inputName">
-			<label>Age: </label>
-			<input type="number" name="" id="inputAge">
-			<button onclick="getDisplay()" style="margin: 5px 0 5px;" >ADD</button>
+			<div>
+				<label>Name: </label>
+				<input type="text" name="" id="inputName">
+				<label>Age: </label>
+				<input type="number" name="" id="inputAge">
+				<button onclick="getDisplay()" style="margin: 5px 0 5px;">ADD</button>
+			</div>
+
+			<div style="padding-bottom: 10px;">
+				<h3>Final Object:</h3> 
+				<p id="finalObj"></p>
+			</div>
+
+			<div>
+				<h3>Readable Format:</h3>
+				<p id="finalFormat"></p>	
+			</div>
 		</div>
 
-		<div style="padding-bottom: 10px;">
-			<h3>Final Object:</h3> 
-			<p id="finalObj"></p>
+		<div style="border-style: solid; padding: 10px; border-radius: 10px;">
+			<h3>PRODUCT INVENTORY</h3>
+
+			<div style="padding:5px;">
+				<label>Name: </label>
+				<input type="text" name="" id="InventName">
+			</div>
+
+			<div style="padding:5px;">
+				<label>Stocks: </label>
+				<input type="number" name="" id="inputStocks">
+			</div>
+
+			<div style="padding:5px;">
+				<label>Price: </label>
+				<input type="number" name="" id="inputPrice">	
+			</div>	
+
+			<div>
+				<button onclick="addtoInventory()" style="margin: 5px 0 5px;" >ADD</button>
+				<h3>Product List:</h3>
+				<p id="productList"></p>
+			</div>	
+
+			
+			<button onclick="calculateTotal()" style="margin: 5px 0 5px;" >Calculate Total Value of each product.</button>
+			<h3>Product Total Value:</h3>
+			<p id="totalProduct"></p>
+			<p id="totalValue"></p>
+			
 		</div>
-
-		<div>
-			<h3>Readable Format:</h3>
-			<p id="finalFormat"></p>	
-		</div>
-	</div>
-
-	<div style="border-style: solid; padding: 10px; border-radius: 10px;">
-		<h3>PRODUCT INVENTORY</h3>
-
-		<div style="padding:5px;">
-			<label>Name: </label>
-			<input type="text" name="" id="InventName">
-		</div>
-
-		<div style="padding:5px;">
-			<label>Stocks: </label>
-			<input type="number" name="" id="inputStocks">
-		</div>
-
-		<div style="padding:5px;">
-			<label>Price: </label>
-			<input type="number" name="" id="inputPrice">	
-		</div>	
-
-		<div>
-			<button onclick="addtoInventory()" style="margin: 5px 0 5px;" >ADD</button>
-			<h3>Product List:</h3>
-			<p id="productList"></p>
-		</div>	
-
-		
-		<button onclick="calculateTotal()" style="margin: 5px 0 5px;" >Calculate Total Value of each product.</button>
-		<h3>Product Total Value:</h3>
-		<p id="totalProduct"></p>
-		<p id="totalValue"></p>
-		
 	</div>
 
 	<script type="text/javascript">
@@ -132,7 +134,7 @@
 				dispStocks.value = "";
 				dispPrice.value = "";
 			}
-			
+
 			ArrProdList.push(arrObj);
 		 	var myJSON = JSON.stringify(ArrProdList);
 
