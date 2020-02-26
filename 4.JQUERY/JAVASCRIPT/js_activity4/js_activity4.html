@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Activity 4</title>
+			<meta charset="utf-8">
+		  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="myStyle.css">
+	</head>
+
+	<body>
+		<div style="" id="border-style">
+			<h3 class="myprofile" id="profile">Profile</h3>
+				<div class="alert alert-danger d-none" role="alert" id="warning-name"></div>
+				<div class="alert alert-danger d-none" role="alert" id="warning-comment"></div>
+				<div class="alert alert-danger d-none" role="alert" id="warning-cbox"></div>
+				<div class="card bg-info d-none" id="new-display"></div>
+				<button type="button" class="btn btn-info d-none" id="new-butt"></button>
+				<div class="container-fluid d-block" id="frame-list">
+				<div class="container-fluid">
+						<div class="form-group">
+							<label for="usr">What's your name?</label>
+							<input type="text" class="form-control" id="inputname">
+						</div>
+				</div>
+				<div class="container-fluid">
+					<div class="form-group">
+						<label>Gender</label>
+							<select class="form-control" id="inputgender">
+						    	<option>Female</option>
+						        <option>Male</option>
+						        <option>Others</option>
+						    </select>	
+					</div>
+				</div>
+				<div class="container-fluid" id="theHobby">
+					<div class="form-group" id="tbl-hobby">
+						<label>Hobbies</label>
+							<p>Select atleast 3</p>
+							<div class="checkbox" onclick="" name="hobb">
+								<label><input type="checkbox" value="Singing">Singing</label>
+							</div>
+							<div class="checkbox" onclick="" name="hobb">
+								  <label><input type="checkbox" value="Dancing">Dancing</label>
+							</div>
+							<div class="checkbox" onclick="" name="hobb">
+								  <label><input type="checkbox" value="Traveling">Traveling</label>
+							</div>
+							
+						<button id="add_list" type="button" class="btn btn-info btn-sm">Add Hobby</button>
+
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="form-group">
+						<label>Tell me something about yourself.</label>
+						<div>
+							<textarea class="form-control" rows="5" id="inputcomment" maxlength="20" ></textarea>
+							<div id="the-count">
+		    				<span id="current">0</span>
+		    				<span id="maximum">/ 20</span>
+		    			</div>
+						<button  id="submit" type="button" class="btn btn-success btn-sm">Submit</button>
+					</div>		
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js_activity4.js"></script>
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

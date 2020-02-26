@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+#border-style {
+	margin: 1%;
+	/*border-style: solid;*/
+}
+#profile {
+	margin: 5%;
+	position: center;
+	text-align: center;
+}
+#inputcomment {
+	
+}
+#hobby_box {
+	margin-bottom: 10px;
+}
+#current {
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+#maximum {
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+#the-count {
+	padding-left: 10px;
+	
+}
+div.alert {
+	margin: 20px;
+}
+div.card {
+	margin: 20px;
+	padding: 20px;
+}
+#new-butt {
+	margin-left: 20px;
+}
+
+
+
