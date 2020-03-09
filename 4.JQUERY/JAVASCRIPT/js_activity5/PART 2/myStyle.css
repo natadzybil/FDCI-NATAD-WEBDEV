@@ -1,0 +1,15 @@
+#border-style {
+	margin: 10%;
+	padding: 10px;
+	list-style: disc;
+
+}
+button {
+	margin-bottom: 10px;
+}
+.square {
+  	height: 100px;
+  	width: 100px;
+  	background-color: #f4b3c2;
+  	border: 2px solid #ea526f;
+}

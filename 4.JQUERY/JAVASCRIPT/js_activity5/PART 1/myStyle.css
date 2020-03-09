@@ -1,0 +1,17 @@
+#border-style {
+	margin: 10%;
+	padding: 5%;
+	list-style: disc;
+}
+.list-que {
+	text-decoration-color: blue;
+	color: blue;
+	cursor: pointer;
+}
+p.hidden {
+	margin-bottom: 0px;
+	padding: 0px;
+	text-decoration: none;
+	display: none;
+	margin-left: 20px;
+}
